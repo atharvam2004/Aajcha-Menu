@@ -9,6 +9,7 @@ const someModel = new mongoose.Schema({
     location: String,
     menu: String,
     address: String,
+    
     price: String,
     lastUpdated: String,
     rating: Number,
