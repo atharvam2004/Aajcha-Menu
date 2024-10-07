@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 mongoose.connect(
   "mongodb+srv://meheratharva49:AR3hw3uX84JJjyPH@cluster0.1uhhhlj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 );
+
 const customer = require("./models/customer");
 const owner = require("./models/owner");
 
