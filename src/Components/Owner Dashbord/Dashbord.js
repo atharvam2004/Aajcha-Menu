@@ -28,7 +28,7 @@ const Dashbord = () => {
             <div className="container-fluid">
                 <div className='row'>
                     <div className='responsive_side col-1 col-sm-3 col-md-3 col-lg-3 bg-prim text-light slider pt-3 animate__animated animate__slideInLeft'>
-                        <h2 className='fs-1'><SiCodio className='fs-2 brand_name'/>Codies Mess<span className='brand_name fw-bold fs-2 text-warning'>.</span></h2>
+                        <h2 className='fs-1'><SiCodio className='fs-2 brand_name'/>odies Mess<span className='brand_name fw-bold fs-2 text-warning'>.</span></h2>
             
                         <hr></hr>
                         <ul className='navbar-nav' >

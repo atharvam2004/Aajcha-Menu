@@ -101,7 +101,7 @@ export const SignupForm = () => {
     return (
         <>
             <div className='d-flex flex-column align-items-center'>
-                <h3 className='fs-3 flex-fill col-prim'><SiCodio className='fs-1 col-prim' />Codies Mess<span className=' fw-bold fs-1 text-warning'>.</span></h3>
+                <h3 className='fs-3 flex-fill col-prim'><SiCodio className='fs-1 col-prim' />odies Mess<span className=' fw-bold fs-1 text-warning'>.</span></h3>
           
             <section className='m-auto login mt-3 border p-3 rounded animate__animated animate__fadeIn'>
                 <h3 className='text-center mb-4'>Sign Up</h3>
