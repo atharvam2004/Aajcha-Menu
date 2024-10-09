@@ -1,3 +1,7 @@
+// *****************************
+// @author - Attharva Meher  **
+// ****************************
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
@@ -5,9 +9,8 @@ const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://meheratharva49:AR3hw3uX84JJjyPH@cluster0.1uhhhlj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb://prathamesh:prathamesh@ac-rovb9yg-shard-00-00.9fh8spg.mongodb.net:27017,ac-rovb9yg-shard-00-01.9fh8spg.mongodb.net:27017,ac-rovb9yg-shard-00-02.9fh8spg.mongodb.net:27017/2_codies?ssl=true&replicaSet=atlas-w4n73x-shard-0&authSource=admin&retryWrites=true&w=majority"
 );
-
 const customer = require("./models/customer");
 const owner = require("./models/owner");
 
