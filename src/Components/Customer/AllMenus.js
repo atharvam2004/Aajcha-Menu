@@ -1,5 +1,5 @@
 // *****************************
-// @author - Atharva Meher  **
+// @author - Attharva Meher  **
 // ****************************
 
 import React, { useState, useEffect } from "react";
