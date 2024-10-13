@@ -9,10 +9,12 @@ import { SiCodio } from "react-icons/si";
 import { BiLogOut } from "react-icons/bi";
 import { MdSystemUpdateAlt } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-
+import MenuBtn from "../../img/menu-btn.png";
 import { useNavigate } from "react-router-dom";
 
 const Dashbord = () => {
+  const [showSideBar, setShowSideBar] = useState(true);
+
   const navigate = useNavigate();
   const [section, setSection] = useState(1);
 
@@ -28,8 +30,18 @@ const Dashbord = () => {
   return (
     <>
       <div className="container-fluid">
+        <div
+          className={`menu-btn ${showSideBar ? "cross-btn" : "ham-btn"}`}
+          onClick={() => {
+            setShowSideBar(!showSideBar);
+          }}
+        ></div>
         <div className="row">
-          <div className="responsive_side col-1 col-sm-3 col-md-3 col-lg-3 bg-prim text-light slider pt-3 animate__animated animate__slideInLeft">
+          <div
+            className={`responsive-side ${
+              showSideBar ? "show-component" : "hide-component"
+            } responsive-side-mobile-control col-1 col-sm-3 col-md-3 col-lg-3 bg-prim text-light slider pt-3 animate__animated animate__slideInLeft`}
+          >
             <h2 className="fs-1">
               <SiCodio className="fs-2 brand_name" />
               odies Mess
