@@ -9,7 +9,7 @@ import { MdOutlineFoodBank } from "react-icons/md";
 
 const OptionCard = ({ toggleMenu }) => {
   return (
-    <div className="d-flex gap-4 mt-3 justify-content-center">
+    <div className="d-flex gap-4 mt-3 justify-content-center option-card">
       <a className="btn btn-primary" onClick={() => toggleMenu(1)}>
         <span className="mobile-hide">All Menus </span>{" "}
         <MdOutlineFoodBank className="fs-5 ms-1" />

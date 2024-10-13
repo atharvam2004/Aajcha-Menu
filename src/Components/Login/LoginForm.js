@@ -7,6 +7,7 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import { SiCodio } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import RestaurantImage from "./../../img/restaurant.png";
 
 export const LoginForm = () => {
   const navigate = useNavigate();
@@ -194,6 +195,7 @@ export const LoginForm = () => {
             {error.message}
           </div>
         )}
+        <img src={RestaurantImage} />
       </div>
     </>
   );
