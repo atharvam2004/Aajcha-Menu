@@ -78,8 +78,8 @@ i:hover {
 }
 
 .bg-hero {
-  height: 30rem;
-  width: 100vw;
+  height: 35rem;
+  width: 100%;
   
   background: linear-gradient(rgba(22, 0, 22, 0.6), rgb(0, 0, 0)), url(https://img.freepik.com/free-photo/indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18716.jpg?w=1380&t=st=1678609979~exp=1678610579~hmac=fe7207cd095084564554c31e8e587a58d762492fd7b69632e32a9dbe7f695302);
   background-repeat: no-repeat;
@@ -94,8 +94,45 @@ h3{
   cursor: pointer;
 }
 
+
+/* CSS to make Owner Dashboard Responsive */
+.menu-btn{
+  display: none;
+}
+
 @media screen and (max-width: 480px) {
-  .mobile-hide {
+  .responsive-side{
     display: none;
+    z-index: 5;
+    width: 60vw;
+    position: absolute;
   }
+  .menu-btn{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 1rem;
+  }
+}
+
+/* General CSS to display or hide any component throught classes*/
+.show-component{
+  display: block;
+}
+
+.hide-component{
+  display: none;
+}
+
+/* CSS for Hamburger Menu Button */
+.ham-btn{
+  transition-duration: .5s;
+  background-image: url("./img/menu-btn.png");
+  background-size: cover;
+}
+
+.cross-btn{
+  transition-duration: .5s;
+  background-image: url("./img/close-btn.png");
+  background-size: cover;
 }

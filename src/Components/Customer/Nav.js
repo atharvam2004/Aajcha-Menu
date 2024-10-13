@@ -42,7 +42,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="container pt-2">
+      <div className="container pt-2 home-nav">
         <div className="d-flex align-items-center">
           <h2 className="fs-3 flex-fill col-prim py-1">
             <SiCodio className="fs-2 col-prim" />
