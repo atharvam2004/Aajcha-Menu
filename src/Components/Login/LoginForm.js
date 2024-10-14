@@ -55,7 +55,7 @@ export const LoginForm = () => {
         setRerender(!rerender);
       }, 5000);
     } else {
-      await fetch("http://localhost:5000/login", {
+      await fetch("https://codies-mess.vercel.app/login", {
         method: "POST",
 
         headers: {

@@ -34,7 +34,7 @@ const Profile = () => {
     if (!findEmail) {
       navigate("/home");
     }
-    await fetch("http://localhost:5000/get-hotel", {
+    await fetch("https://codies-mess.vercel.app/get-hotel", {
       method: "POST",
 
       headers: {

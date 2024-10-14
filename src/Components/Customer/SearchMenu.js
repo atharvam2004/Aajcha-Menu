@@ -15,7 +15,7 @@ const SearchMenu = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await fetch("http://localhost:5000/find-menu", {
+    await fetch("https://codies-mess.vercel.app/find-menu", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
