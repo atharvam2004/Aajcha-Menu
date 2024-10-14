@@ -74,7 +74,7 @@ export const SignupForm = () => {
         setRerender(!rerender);
       }, 5000);
     } else {
-      await fetch("http://localhost:5000/signup", {
+      await fetch("https://codies-mess.vercel.app/signup", {
         method: "POST",
 
         headers: {

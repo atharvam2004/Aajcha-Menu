@@ -18,7 +18,7 @@ const UpdateProfileForm = () => {
       // eslint-disable-next-line no-restricted-globals
       location.assign("/");
     }
-    await fetch("http://localhost:5000/get-owner", {
+    await fetch("https://codies-mess.vercel.app/get-owner", {
       method: "POST",
 
       headers: {
@@ -67,7 +67,7 @@ const UpdateProfileForm = () => {
   const handleSubmit = async () => {
     try {
       let auth_token = localStorage.getItem("auth_token");
-      await fetch("http://localhost:5000/update-owner", {
+      await fetch("https://codies-mess.vercel.app/update-owner", {
         method: "POST",
 
         headers: {

@@ -22,7 +22,7 @@ const UpdateMenuForm = () => {
       // eslint-disable-next-line no-restricted-globals
       location.assign("/");
     }
-    await fetch("http://localhost:5000/get-menu", {
+    await fetch("https://codies-mess.vercel.app/get-menu", {
       method: "POST",
 
       headers: {
@@ -57,7 +57,7 @@ const UpdateMenuForm = () => {
   const handleSubmit = async () => {
     try {
       let auth_token = localStorage.getItem("auth_token");
-      await fetch("http://localhost:5000/update-menu", {
+      await fetch("https://codies-mess.vercel.app/update-menu", {
         method: "POST",
 
         headers: {
