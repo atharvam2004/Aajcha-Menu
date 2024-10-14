@@ -34,14 +34,20 @@ const SearchMenu = () => {
   };
   return (
     <div className="container animate__animated animate__fadeIn">
-      <form className="form-inline d-flex mt-3" onSubmit={handleSubmit}>
+      <form
+        className="form-inline d-flex mt-3 justify-content-center"
+        onSubmit={handleSubmit}
+      >
         <input
-          className="form-control search m-auto"
+          className="form-control search mx-3"
           type="search"
           placeholder="Search Food"
           value={query}
           onChange={handleInputChange}
         />
+        <button type="submit" className="btn btn-primary mx-3">
+          Search
+        </button>
       </form>
       {results.length > 0 && (
         <>
@@ -63,6 +69,7 @@ const SearchMenu = () => {
           </div>
         </>
       )}
+      {results.length == 0 && <h3 className="mb-3 mt-3 py-1"> No Results </h3>}
     </div>
   );
 };

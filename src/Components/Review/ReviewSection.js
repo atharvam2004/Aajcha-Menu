@@ -37,7 +37,7 @@ const ReviewSection = () => {
     <>
       <h1 className="col-prim fs-3">Reviews</h1>
       <hr />
-      {data.length == 0 && <p className="lead fw-normal">No Reviews</p>}
+      {data.length === 0 && <p className="lead fw-normal">No Reviews</p>}
       <div className="row mb-3">
         {data.map((element) => {
           return (

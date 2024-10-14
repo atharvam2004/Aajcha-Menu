@@ -125,77 +125,85 @@ export const LoginForm = () => {
 
   return (
     <>
-      <div className="d-flex flex-column align-items-center">
-        <h3 className="fs-3 col-prim">
-          <SiCodio className="fs-1 col-prim" />
-          odies Mess<span className=" fw-bold fs-1 text-warning">.</span>
-        </h3>
-        <section className="login border p-3 rounded animate__animated animate__fadeIn">
-          <h3 className="text-center mb-4">Login</h3>
-          <div className="m-auto">
-            <div className="d-flex gap-5 mb-4 justify-content-center align-item-center">
-              <button
-                onClick={() => handleTabClick(1)}
-                className={`rounded ${activeTab === 1 ? "active-btn" : ""}`}
-              >
-                Customer
-              </button>
-              <button
-                onClick={() => handleTabClick(2)}
-                className={`rounded ${activeTab === 2 ? "active-btn" : ""}`}
-              >
-                Owner
-              </button>
-            </div>
-            <form>
-              <div className="mb-3">
-                <label className="form-label">Email address</label>
-                <input
-                  type="email"
-                  className="form-control search"
-                  id="email"
-                  name="email"
-                  value={formValue.email}
-                  onChange={handleChange}
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value={formValue.password}
-                  onChange={handleChange}
-                  className="form-control search"
-                />
-              </div>
-              <div className="text-center d-flex flex-column">
+      <div
+        className="d-flex justify-content-center align-items-center flex-wrap"
+        style={{ height: "100vh" }}
+      >
+        <div className="d-flex flex-column align-items-center mx-5">
+          <h3 className="fs-3 flex-fill col-prim">
+            <span className="text-warning fw-bold fs-2">आजचा</span> Menu
+          </h3>
+          <section className="login border p-3 rounded animate__animated animate__fadeIn">
+            <h3 className="text-center mb-4">Login</h3>
+            <div className="m-auto">
+              <div className="d-flex gap-5 mb-4 justify-content-center align-item-center">
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    login();
-                  }}
-                  className="btn btn-primary mb-2"
+                  onClick={() => handleTabClick(1)}
+                  className={`rounded ${activeTab === 1 ? "active-btn" : ""}`}
                 >
-                  Login
+                  Customer
                 </button>
-                <Link to="/signup">
-                  <button>
-                    <a className="text-center">Sign Up</a>
-                  </button>
-                </Link>
+                <button
+                  onClick={() => handleTabClick(2)}
+                  className={`rounded ${activeTab === 2 ? "active-btn" : ""}`}
+                >
+                  Owner
+                </button>
               </div>
-            </form>
-          </div>
-        </section>
-        {error.error && (
-          <div className="alert alert-danger mt-2 text-center" role="alert">
-            {error.message}
-          </div>
-        )}
-        <img src={RestaurantImage} />
+              <form>
+                <div className="mb-3">
+                  <label className="form-label">Email address</label>
+                  <input
+                    type="email"
+                    className="form-control search"
+                    id="email"
+                    name="email"
+                    value={formValue.email}
+                    onChange={handleChange}
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={formValue.password}
+                    onChange={handleChange}
+                    className="form-control search"
+                  />
+                </div>
+                <div className="text-center d-flex flex-column">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      login();
+                    }}
+                    className="btn btn-primary mb-2"
+                  >
+                    Login
+                  </button>
+                  <Link to="/signup">
+                    <button>
+                      <a className="text-center">Sign Up</a>
+                    </button>
+                  </Link>
+                </div>
+              </form>
+            </div>
+          </section>
+          {error.error && (
+            <div className="alert alert-danger mt-2 text-center" role="alert">
+              {error.message}
+            </div>
+          )}
+        </div>
+        <img
+          src={RestaurantImage}
+          className="mx-5"
+          style={{ objectFit: "contain" }}
+        />
       </div>
     </>
   );

@@ -42,11 +42,10 @@ const Dashbord = () => {
               showSideBar ? "show-component" : "hide-component"
             } responsive-side-mobile-control col-1 col-sm-3 col-md-3 col-lg-3 bg-prim text-light slider pt-3 animate__animated animate__slideInLeft`}
           >
-            <h2 className="fs-1">
-              <SiCodio className="fs-2 brand_name" />
-              odies Mess
-              <span className="brand_name fw-bold fs-2 text-warning">.</span>
-            </h2>
+            <h3 className="fs-3 flex-fill col-prim">
+              <span className="text-warning fw-bold fs-2">आजचा</span>{" "}
+              <span className="text-light">Menu</span>
+            </h3>
 
             <hr></hr>
             <ul className="navbar-nav">

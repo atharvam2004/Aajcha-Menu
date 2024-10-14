@@ -39,7 +39,7 @@ const AllMenus = () => {
     <div className="container animate__animated animate__fadeIn">
       <h2 className="text-center mt-3 mb-3 py-1">Today's Menu</h2>
       <div className="d-flex flex-wrap gap-2">
-        {menus === [] ? (
+        {menus == [] ? (
           <div className="m-auto mt-3">
             <h3 className="col-prim animate__animated animate__shakeX">
               No Items

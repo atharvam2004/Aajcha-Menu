@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { SiCodio } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import RestaurantImage from "./../../img/restaurant.png";
 
 export const SignupForm = () => {
   const navigate = useNavigate();
@@ -121,103 +122,112 @@ export const SignupForm = () => {
 
   return (
     <>
-      <div className="d-flex flex-column align-items-center">
-        <h3 className="fs-3 flex-fill col-prim">
-          <SiCodio className="fs-1 col-prim" />
-          odies Mess<span className=" fw-bold fs-1 text-warning">.</span>
-        </h3>
+      <div
+        className="d-flex justify-content-center align-items-center flex-wrap"
+        style={{ height: "100vh" }}
+      >
+        <div className="d-flex flex-column align-items-center mx-5">
+          <h3 className="fs-3 flex-fill col-prim">
+            <span className="text-warning fw-bold fs-2">आजचा</span> Menu
+          </h3>
 
-        <section className="m-auto login mt-3 border p-3 rounded animate__animated animate__fadeIn">
-          <h3 className="text-center mb-4">Sign Up</h3>
-          <div className="m-auto">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label className="form-label">Name</label>
-                <input
-                  type="name"
-                  id="name"
-                  name="name"
-                  className="form-control search"
-                  onChange={handleChange}
-                  value={formValue.name}
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Email address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="form-control search"
-                  onChange={handleChange}
-                  value={formValue.email}
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div className="mb-3 d-flex">
-                <label className="form-label">Role:</label>
-                <div className="form-check ms-3">
+          <section className="m-auto login mt-3 border p-3 rounded animate__animated animate__fadeIn">
+            <h3 className="text-center mb-4">Sign Up</h3>
+            <div className="m-auto">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label className="form-label">Name</label>
                   <input
-                    className="form-check-input custom-control"
-                    checked={formValue.role == "customer"}
-                    type="radio"
-                    name="role"
+                    type="name"
+                    id="name"
+                    name="name"
+                    className="form-control search"
                     onChange={handleChange}
-                    value="customer"
-                    id="customer"
+                    value={formValue.name}
+                    aria-describedby="emailHelp"
                   />
-                  <label className="form-check-label" for="customer">
-                    Customer
-                  </label>
                 </div>
-                <div className="form-check ms-3">
+                <div className="mb-3">
+                  <label className="form-label">Email address</label>
                   <input
-                    className="form-check-input"
-                    type="radio"
-                    name="role"
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="form-control search"
                     onChange={handleChange}
-                    checked={formValue.role == "owner"}
-                    value="owner"
-                    id="owner"
+                    value={formValue.email}
+                    aria-describedby="emailHelp"
                   />
-                  <label className="form-check-label" for="owner">
-                    Owner
-                  </label>
                 </div>
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Create Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  className="form-control search"
-                  onChange={handleChange}
-                  value={formValue.password}
-                />
-              </div>
-              <div className="text-center d-flex flex-column">
-                <button type="submit" className="btn btn-primary mb-2">
-                  Sign Up
-                </button>
-                <Link to="/">
-                  <button>
-                    <a className="text-center">
-                      Already have an account?{" "}
-                      <span className="text-danger">Login</span>
-                    </a>
+                <div className="mb-3 d-flex">
+                  <label className="form-label">Role:</label>
+                  <div className="form-check ms-3">
+                    <input
+                      className="form-check-input custom-control"
+                      checked={formValue.role == "customer"}
+                      type="radio"
+                      name="role"
+                      onChange={handleChange}
+                      value="customer"
+                      id="customer"
+                    />
+                    <label className="form-check-label" for="customer">
+                      Customer
+                    </label>
+                  </div>
+                  <div className="form-check ms-3">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="role"
+                      onChange={handleChange}
+                      checked={formValue.role == "owner"}
+                      value="owner"
+                      id="owner"
+                    />
+                    <label className="form-check-label" for="owner">
+                      Owner
+                    </label>
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Create Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    className="form-control search"
+                    onChange={handleChange}
+                    value={formValue.password}
+                  />
+                </div>
+                <div className="text-center d-flex flex-column">
+                  <button type="submit" className="btn btn-primary mb-2">
+                    Sign Up
                   </button>
-                </Link>
-              </div>
-            </form>
-          </div>
-        </section>
-        {error.error && (
-          <div className="alert alert-danger mt-2 text-center" role="alert">
-            {error.message}
-          </div>
-        )}
+                  <Link to="/">
+                    <button>
+                      <a className="text-center">
+                        Already have an account?{" "}
+                        <span className="text-danger">Login</span>
+                      </a>
+                    </button>
+                  </Link>
+                </div>
+              </form>
+            </div>
+          </section>
+          {error.error && (
+            <div className="alert alert-danger mt-2 text-center" role="alert">
+              {error.message}
+            </div>
+          )}
+        </div>
+        <img
+          src={RestaurantImage}
+          className="mx-5"
+          style={{ objectFit: "contain" }}
+        />
       </div>
     </>
   );
