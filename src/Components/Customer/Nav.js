@@ -44,10 +44,9 @@ const Nav = () => {
     <>
       <div className="container pt-2 home-nav">
         <div className="d-flex align-items-center">
-          <h2 className="fs-3 flex-fill col-prim py-1">
-            <SiCodio className="fs-2 col-prim" />
-            odies Mess<span className=" fw-bold fs-2 text-warning">.</span>
-          </h2>
+          <h3 className="fs-3 flex-fill col-prim">
+            <span className="text-warning fw-bold fs-2">आजचा</span> Menu
+          </h3>
 
           <p className="mx-4 my-2 lead fw-normal">Welcome, {name}</p>
           <BiLogOut
